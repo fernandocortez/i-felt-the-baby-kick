@@ -1,0 +1,25 @@
+@media screen {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: 0;
+	}
+
+	/* html {
+		color-scheme: light dark;
+	} */
+
+	body {
+		font-family: system-ui;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		padding: 0 1em 1em;
+	}
+}
