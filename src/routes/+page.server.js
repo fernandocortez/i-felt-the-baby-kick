@@ -1,3 +1,5 @@
+import { turso } from "$lib/server/turso.server";
+
 /** @type {import('./$types').Actions} */
 export const actions = {
 	save: async ({ request }) => {
@@ -5,8 +7,11 @@ export const actions = {
 		const count = data.get('count');
 		const notes = data.get('notes');
 
-		console.log('count:', count);
-		console.log('notes:', notes);
+		const timestamp = new Date().toISOString();
+		await turso.execute({
+			sql: 'INSERT INTO kicks (timestamp, kick_count, notes) VALUES (:timestamp, :count, :notes);',
+			args: { timestamp, count, notes }
+		});
 
 		return { success: true };
 	}
