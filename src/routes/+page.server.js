@@ -1,4 +1,4 @@
-import { turso } from "$lib/server/turso.server";
+import { turso } from '$lib/server/turso.server';
 
 /** @type {import('./$types').Actions} */
 export const actions = {

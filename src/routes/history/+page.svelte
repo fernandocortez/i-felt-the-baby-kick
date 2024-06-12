@@ -1,11 +1,11 @@
+<script>
+	export let data;
+</script>
+
 <svelte:head>
 	<title>I felt the baby kick! - History</title>
 	<meta name="description" content="History of when the baby has kicked" />
 </svelte:head>
-
-<script>
-	export let data;
-</script>
 
 <h1>History</h1>
 <table class="pure-table pure-table-striped">
