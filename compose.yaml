@@ -1,0 +1,11 @@
+---
+services:
+  app:
+    image: mexitechie/i-felt-the-baby-kick:latest
+    container_name: i-felt-the-baby-kick
+    environment:
+      TURSO_DATABASE_URL: ${TURSO_DATABASE_URL}
+      TURSO_AUTH_TOKEN: ${TURSO_AUTH_TOKEN}
+    ports:
+      - 2781:3000
+    restart: unless-stopped
